@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import FormStepper from "./FormStepper";
+import { CssBaseline, Container, Paper, Box } from "@material-ui/core";
+import Header from "./Header"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+     <Header />
+      <CssBaseline />
+      <Container component={Box} p={4}>
+        <Paper component={Box} p={3}>
+          <FormStepper />
+        </Paper>
+      </Container>
+    </>
   );
 }
 
